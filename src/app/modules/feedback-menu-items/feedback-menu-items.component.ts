@@ -189,7 +189,7 @@ export class FeedbackMenuItemsComponent implements OnInit, OnDestroy {
     };
     this.modalService.open(
       {component: CustomerFeedbackOrderDetailsComponent, data: {orderInfo: orderInfo}},
-      'BOTTOM', 'RIGHT', 'BOTTOM',
+      'RIGHT', 'RIGHT', 'BOTTOM',
       {disableClose: true, backdropClass: 'right-sheet-width'});
 
   }
