@@ -6,10 +6,7 @@ import { NavItem } from '../../../core/models/ui/nav-item';
 import moment from 'moment';
 import { CookieService } from 'ngx-cookie-service';
 import { CONST } from '../../../core/utils/constant';
-import clevertap from 'clevertap-web-sdk';
-import { CleverTapService } from '../../../core/utils/helpers/clever-tap.service';
 import { MatRightSheet } from 'mat-right-sheet';
-import { MobileAppHeaderComponent } from './mobile-app-header/mobile-app-header.component';
 import { DataStore } from '../../../core/utils/framework/data-store.service';
 import { AppService } from '../../../app.service';
 
