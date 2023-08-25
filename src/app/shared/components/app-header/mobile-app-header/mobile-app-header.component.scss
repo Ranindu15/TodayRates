@@ -1,5 +1,4 @@
 @import 'src/theme/styles/colors';
-@import 'src/theme/styles/layout';
 .rightsheet-container {
   background-color: $white;
   height: 100%;
@@ -23,12 +22,15 @@ hr{
 .mat-expansion-panel-header{
   padding: 4px;
 }
-@media screen and (min-width: $mobile_max_width) and (max-width: $tab_max_width) {
+.logo-icon{
+
+}
+@media screen and (min-width:376px) and (max-width:768px) {
   .logo-icon{
     width: 200px;
   }
 }
-@media screen and (max-width: $tab_min_width) {
+@media screen and (max-width: 375px) {
   .logo-icon{
     width: 150px;
   }

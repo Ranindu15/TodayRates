@@ -1,4 +1,4 @@
-@import 'src/theme/styles/colors';
+@import 'src/theme/styles/_colors';
 
 $max: 650;
 $offset: 2;
@@ -29,11 +29,6 @@ $unit: 'px';
 @include list-loop('.p-b-', 'padding-bottom');
 @include list-loop('.p-l-', 'padding-left');
 @include list-loop('.p-x-', 'padding');
-
-$mobile_max_width: 480px;
-$tab_min_width: 481px;
-$tab_max_width: 768px;
-$desktop_min_width: 769px;
 
 //mat input fields stylings
 .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,
@@ -234,7 +229,7 @@ $desktop_min_width: 769px;
     box-shadow: none;
   }
 
-  @media screen and (max-width: $mobile_max_width) {
+  @media screen and (max-width: 375px) {
     .mat-tab-label {
       padding: 0px 15px;
     }
@@ -242,15 +237,10 @@ $desktop_min_width: 769px;
 }
 
 // sku-management
-.finance-view {
-  .mat-form-field-appearance-fill .mat-form-field-flex {
-    padding-top: 4px;
-  }
-}
-
+.finance-view,
 .datepicker-container {
   .mat-form-field-appearance-fill .mat-form-field-flex {
-    padding-top: 16px;
+    padding-top: 20px;
   }
 }
 
@@ -268,7 +258,8 @@ $desktop_min_width: 769px;
 .business-hours,
 .add-user-modal,
 .finance-report-container,
-.save-list-view,
+.filter-con,
+.save-list-view ,
 .sku-item-addon-container {
   .mat-form-field-underline {
     display: none;
@@ -292,63 +283,6 @@ $desktop_min_width: 769px;
 
   .mat-form-field-appearance-fill .mat-form-field-flex {
     padding-top: 20px;
-  }
-}
-
-.filter-con,
-.order-filter-container {
-  .input-with-padding {
-    .mat-form-field-appearance-fill .mat-form-field-flex {
-      padding-top: 16px;
-    }
-
-    .mat-form-field-underline {
-      display: none;
-    }
-
-    .mat-form-field.mat-focused .mat-form-field-label {
-      color: $black40;
-    }
-
-    .mat-input-element {
-      caret-color: $black40;
-    }
-
-    .mat-form-field-flex {
-      height: 48px;
-    }
-
-    .mat-select-arrow-wrapper {
-      padding-right: 12px;
-    }
-
-  }
-
-  .input-with-no-padding {
-    .mat-form-field-appearance-fill .mat-form-field-flex {
-      padding-top: 4px;
-    }
-
-    .mat-form-field-underline {
-      display: none;
-    }
-
-    .mat-form-field.mat-focused .mat-form-field-label {
-      color: $black40;
-    }
-
-    .mat-input-element {
-      caret-color: $black40;
-    }
-
-    .mat-form-field-flex {
-      height: 48px;
-    }
-
-    .mat-select-arrow-wrapper {
-      padding-right: 12px;
-    }
-
   }
 }
 
@@ -420,7 +354,6 @@ $desktop_min_width: 769px;
 .price-update-edit,
 .create-new-user,
 .Login-screen,
-.sales-analytics-view,
 .cohorts-category-dialog {
   .mat-form-field-underline {
     display: none;
@@ -479,23 +412,6 @@ $desktop_min_width: 769px;
 .edit-promo-container {
   .mat-form-field-appearance-fill .mat-form-field-flex {
     padding-top: 24px;
-  }
-
-  .input-with-no-padding {
-    .mat-form-field-appearance-fill .mat-form-field-flex {
-      padding-top: 12px;
-      display: flex;
-      align-items: end;
-    }
-  }
-}
-
-.sku-item-discount-dialog,
-.sku-discount {
-  .input-with-no-padding {
-    .mat-form-field-appearance-fill .mat-form-field-flex {
-      padding-top: 4px;
-    }
   }
 }
 
@@ -637,7 +553,7 @@ $desktop_min_width: 769px;
     margin-right: 40px !important;
   }
 
-  @media only screen and (min-width:1367px) and (max-width: 1600px) {
+  @media only screen and (max-width: 1600px) {
     .card-desc-overlay {
       width: 282px;
     }
@@ -649,7 +565,7 @@ $desktop_min_width: 769px;
     }
   }
 
-  @media only screen and (min-width:1281px) and (max-width: 1366px) {
+  @media only screen and (max-width: 1366px) {
     .card-desc-overlay {
       width: 242px;
     }
@@ -661,7 +577,7 @@ $desktop_min_width: 769px;
     }
   }
 
-  @media screen and (max-width: $mobile_max_width) {
+  @media screen and (max-width: 375px) {
 
     .last-margin:nth-child(1),
     .last-margin:nth-child(2),
@@ -670,11 +586,12 @@ $desktop_min_width: 769px;
     }
 
     .card-desc-overlay {
+      width: 295px;
       height: 344px;
     }
   }
 
-  @media screen and (min-width: $tab_min_width) and (max-width: $tab_max_width) {
+  @media screen and (min-width:376px) and (max-width:768px) {
     .last-margin:nth-child(2) {
       margin-right: 0px !important;
     }
@@ -685,6 +602,7 @@ $desktop_min_width: 769px;
     }
 
     .card-desc-overlay {
+      width: 294px;
       height: 354px;
     }
   }
@@ -692,35 +610,35 @@ $desktop_min_width: 769px;
 
 .outlet-availability {
   .card-desc-overlay {
+    width: 362px;
     background: $black60;
     opacity: 0.97;
     color: $white;
     height: 325px;
   }
 
-  @media only screen and (min-width:1601px) and (max-width: 1920px) {
-    .card-desc-overlay {
-      width: 362px;
-      height: 325px;
-    }
-  }
-
-  @media only screen and (min-width:1367px) and (max-width: 1600px) {
+  @media only screen and (max-width: 1600px) {
     .card-desc-overlay {
       width: 282px;
       height: 324px;
     }
   }
 
-  @media only screen and (min-width: $desktop_min_width) and (max-width: 1366px) {
+  @media only screen and (max-width: 1366px) {
     .card-desc-overlay {
       width: 252px;
       height: 325px;
     }
   }
 
+  @media screen and (max-width: 375px) {
+    .card-desc-overlay {
+      width: 295px;
+    }
+  }
+
   // Tablet
-  @media screen and (min-width: $tab_min_width) and (max-width: $tab_max_width) {
+  @media screen and (min-width:376px) and (max-width:768px) {
     .last-margin:nth-child(1) {
       margin-right: 20px !important;
     }
@@ -730,27 +648,21 @@ $desktop_min_width: 769px;
 .order-completion {
   .container-1 {
     .card-desc-overlay {
+      width: 392px;
       background: $black60;
       opacity: 0.97;
       color: $white;
       height: 352px;
     }
 
-    @media only screen and (min-width:1601px) and (max-width: 1920px) {
-      .card-desc-overlay {
-        width: 392px;
-        height: 352px;
-      }
-    }
-
-    @media only screen and (min-width:1367px) and (max-width: 1600px) {
+    @media only screen and (max-width: 1600px) {
       .card-desc-overlay {
         width: 322px;
         height: 354px;
       }
     }
 
-    @media only screen and (min-width: $desktop_min_width) and (max-width: 1366px) {
+    @media only screen and (max-width: 1366px) {
       .card-desc-overlay {
         width: 252px;
         height: 356px;
@@ -761,27 +673,21 @@ $desktop_min_width: 769px;
   .container-2,
   .container-3 {
     .card-desc-overlay {
+      width: 362px;
       background: $black60;
       opacity: 0.97;
       color: $white;
       height: 356px;
     }
 
-    @media only screen and (min-width:1601px) and (max-width: 1920px) {
-      .card-desc-overlay {
-        width: 362px;
-        height: 356px;
-      }
-    }
-
-    @media only screen and (min-width:1367px) and (max-width: 1600px) {
+    @media only screen and (max-width: 1600px) {
       .card-desc-overlay {
         width: 282px;
         height: 354px;
       }
     }
 
-    @media only screen and (min-width: $desktop_min_width) and (max-width: 1366px) {
+    @media only screen and (max-width: 1366px) {
       .card-desc-overlay {
         width: 252px;
         height: 356px;
@@ -795,11 +701,33 @@ $desktop_min_width: 769px;
     }
   }
 
-  @media screen and (min-width: $tab_min_width) and (max-width: $tab_max_width) {
+  @media screen and (max-width: 375px) {
+
+    .container-2,
+    .container-3,
+    .container-1 {
+      .card-desc-overlay {
+        width: 295px;
+      }
+    }
+  }
+
+  @media screen and (min-width:376px) and (max-width:768px) {
 
     .last-margin:nth-child(1),
     .last-margin:nth-child(3) {
       margin-right: 20px !important;
+    }
+  }
+
+  @media screen and (min-width:376px) and (max-width:768px) {
+
+    .container-2,
+    .container-3,
+    .container-1 {
+      .card-desc-overlay {
+        width: 295px;
+      }
     }
   }
 }
@@ -836,6 +764,7 @@ $desktop_min_width: 769px;
   }
 
   .mat-expansion-panel-header.mat-expanded {
+    height: 54px !important;
     margin-bottom: -10px;
   }
 }
@@ -884,34 +813,35 @@ $desktop_min_width: 769px;
 
 .rider-friendly {
   .card-desc-overlay {
+    width: 352px;
     background: $black60;
     opacity: 0.97;
     color: $white;
     height: 352px;
   }
 
-  @media only screen and (min-width:1601px) and (max-width: 1920px) {
-    .card-desc-overlay {
-      width: 352px;
-    }
-  }
-
-  @media only screen and (min-width:1367px) and (max-width: 1600px) {
+  @media only screen and (max-width: 1600px) {
     .card-desc-overlay {
       width: 272px;
       height: 363px;
     }
   }
 
-  @media only screen and (min-width: $desktop_min_width) and (max-width: 1366px) {
+  @media only screen and (max-width: 1366px) {
     .card-desc-overlay {
       width: 252px;
       height: 353px;
     }
   }
 
+  @media screen and (max-width: 375px) {
+    .card-desc-overlay {
+      width: 295px;
+    }
+  }
+
   // Tablet
-  @media screen and (min-width: $tab_min_width) and (max-width: $tab_max_width) {
+  @media screen and (min-width:376px) and (max-width:768px) {
     .last-margin:nth-child(1) {
       margin-right: 40px !important;
     }
@@ -1073,32 +1003,9 @@ $desktop_min_width: 769px;
   justify-content: space-between;
 }
 
-.flex-row-s-a {
-  display: flex;
-  justify-content: space-around;
-}
-
-.grid-3-col-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.flex-row-c {
-  display: flex;
-  justify-content: center;
-}
-
 .flex-column {
   display: flex;
   flex-direction: column;
-}
-
-.flex {
-  display: flex;
-}
-
-.pointer-cursor {
-  cursor: pointer;
 }
 
 .sku-category {
@@ -1108,7 +1015,7 @@ $desktop_min_width: 769px;
 }
 
 .sku-add-option-modal {
-  @media screen and (max-width: $mobile_max_width) {
+  @media screen and (max-width: 375px) {
     .item-field {
       .mat-form-field-flex {
         max-width: 240px;
@@ -1128,31 +1035,12 @@ $desktop_min_width: 769px;
   height: auto;
 }
 
-.order-history-container,
-.item-analytics {
+.order-history-container {
   .mat-paginator-page-size {
     margin-top: -10px !important;
   }
-
-  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
-    margin-top: -8px !important;
-  }
 }
-
-.item-analytics,
-.sales-analytics-view {
-  .mat-select-panel {
-    background: red;
-  }
-
-  ::ng-deep .mat-select-content {
-    width: 2000px;
-    background-color: red;
-    font-size: 10px;
-  }
-}
-
-.center-text {
+.center-text{
   text-align: center;
 }
 
@@ -1172,43 +1060,21 @@ $desktop_min_width: 769px;
   .bs-media-container {
     display: flex;
 
-    @media screen and (min-width: $tab_min_width) and (max-width: $tab_max_width) {
+    @media screen and (min-width: 376px) and (max-width: 768px) {
       flex-direction: row !important;
     }
-
-    @media screen and (max-width: $mobile_max_width) {
+    @media screen and (max-width: 375px) {
       flex-direction: column !important;
     }
   }
 }
-
-@media screen and (min-width: $tab_min_width) and (max-width: $tab_max_width) {
+@media screen and (min-width: 376px) and (max-width: 768px) {
   .cdk-overlay-pane:not(.right-sheet-width~.cdk-global-overlay-wrapper>.cdk-overlay-pane) {
     max-width: 90vw !important;
   }
 }
-
-.sales-analytics-view,
-.item-analytics {
-  .mat-fab .mat-button-wrapper {
-    padding: 0px !important;
-  }
-}
-
-@media screen and (max-width: $mobile_max_width) {
+@media screen and (max-width: 375px) {
   .cdk-overlay-pane:not(.right-sheet-width~.cdk-global-overlay-wrapper>.cdk-overlay-pane) {
     max-width: 90vw !important;
-  }
-}
-
-.bulk-discount-select-items {
-  .mat-content {
-    display: inline;
-  }
-}
-
-@media (hover: none) {
-  .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
-    background: $black20;
   }
 }

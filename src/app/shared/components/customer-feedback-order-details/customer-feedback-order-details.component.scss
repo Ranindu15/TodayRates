@@ -1,5 +1,4 @@
 @import '../../../../theme/styles/colors';
-@import '../../../../theme/styles/layout';
 
 .feedback-container-right-sheet {
   background-color: $white;
@@ -252,7 +251,7 @@ hr {
 }
 
 //mobile
-@media screen and (max-width: $mobile_max_width) {
+@media screen and (max-width: 375px) {
 
   .button-active {
     padding-left: 8px;
@@ -291,7 +290,7 @@ hr {
 }
 
 // Tablet
-@media screen and (min-width: $tab_min_width) and (max-width: $tab_max_width) {
+@media screen and (min-width: 376px) and (max-width: 768px) {
 
   .button-active {
     width: auto;
@@ -314,7 +313,7 @@ hr {
   }
 }
 
-@media screen and (min-width: $desktop_min_width) {
+@media screen and (min-width: 769px) {
 
   .clear-icon {
     margin-top: -6px;

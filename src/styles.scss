@@ -19,7 +19,6 @@
 @import 'src/theme/components/ngx-datepicker';
 @import 'src/theme/components/right-sheet';
 @import 'src/theme/components/responsive-styles';
-@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
 html, body {
   height: 100%;
@@ -58,8 +57,5 @@ body {
 
 .hidden {
   height: 0;
-  visibility: hidden;
-}
-.grecaptcha-badge {
   visibility: hidden;
 }
