@@ -1,8 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Menu } from '../../../../core/models/ui/menu';
 import { RouteManager } from '../../../../core/utils/framework/route-manager.service';
-import clevertap from 'clevertap-web-sdk';
-import { CleverTapService } from '../../../../core/utils/helpers/clever-tap.service';
 import { CONST } from '../../../../core/utils/constant';
 import { ConfigLoader } from '../../../../core/utils/framework/config-loader.service';
 import { NavItem } from '../../../../core/models/ui/nav-item';

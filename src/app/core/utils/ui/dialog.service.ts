@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { MatLegacyDialog as MatDialog, MatLegacyDialogConfig as MatDialogConfig } from '@angular/material/legacy-dialog';
 import { Observable } from 'rxjs';
 import { DialogComponent } from '../../../shared/components/dialog/dialog.component';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Injectable()
 export class DialogService {

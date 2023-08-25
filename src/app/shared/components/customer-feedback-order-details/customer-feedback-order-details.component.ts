@@ -6,15 +6,12 @@ import {
   PassengerOrderCount
 } from '../../../core/models/api/responses/customer-feedback';
 import { CommonHelper } from '../../../core/utils/helpers/common-helper.service';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import { Subscription } from 'rxjs';
 import { FeedbackServiceHandler } from '../../../core/services/service-handlers/feedback-service-handler';
 import { DataKey, DataStore } from '../../../core/utils/framework/data-store.service';
 import { ConfigLoader } from '../../../core/utils/framework/config-loader.service';
 import { FeedbackDiscount, NewFeedbackDiscount, } from '../../../core/models/api/responses/feedback-discount';
 import {
-  CustomerReply,
-  Discount,
   SelectedPassengers
 } from '../../../core/models/api/payloads/customer-feedback-payloads';
 import { Spinner } from '../../../core/utils/ui/spinner.service';
@@ -23,6 +20,7 @@ import { CONST } from '../../../core/utils/constant';
 import { MerchantProfile } from '../../../core/models/api/responses/merchant-profile';
 import { AwardFeedbackDiscountEvent } from '../../../core/models/events/award-feedback-discount';
 import { ModalService } from '../../../core/utils/ui/modal.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'mp-customer-feedback-order-details',

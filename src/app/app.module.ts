@@ -11,12 +11,9 @@ import { RouteManager } from './core/utils/framework/route-manager.service';
 import { QueryParamsService } from './core/utils/framework/query-params.service';
 import { CommonHelper } from './core/utils/helpers/common-helper.service';
 import { CookieService } from 'ngx-cookie-service';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { Snackbar } from './core/utils/ui/snackbar.service';
-import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
 import { ErrorInterceptor } from './core/services/error-interceptor.service';
 import { DialogService } from './core/utils/ui/dialog.service';
-import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { Spinner } from './core/utils/ui/spinner.service';
 import { UserServiceHandler } from './core/services/service-handlers/user-service-handler';
@@ -27,6 +24,9 @@ import { BaseService } from './core/services/base-service';
 import { CleverTapService } from './core/utils/helpers/clever-tap.service';
 import { InvalidTokenDialogModule } from './shared/components/invalid-token-dialog/invalid-token-dialog.module';
 import { SpinnerModule } from './shared/components/spinner/spinner.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 export function initialize(app: AppService) {
   return async () => {

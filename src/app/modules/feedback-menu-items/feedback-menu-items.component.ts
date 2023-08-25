@@ -11,16 +11,15 @@ import { Spinner } from '../../core/utils/ui/spinner.service';
 import { ConfigLoader } from '../../core/utils/framework/config-loader.service';
 import { Snackbar } from '../../core/utils/ui/snackbar.service';
 import { RankingCommentsComponent } from './ranking-comments/ranking-comments.component';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
-import { LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
 import {
   CustomerFeedbackOrderDetailsComponent
 } from '../../shared/components/customer-feedback-order-details/customer-feedback-order-details.component';
-import { CustomerFeedback } from '../../core/models/api/responses/customer-feedback';
 import { CONST } from '../../core/utils/constant';
 import { FeedbackServiceHandler } from '../../core/services/service-handlers/feedback-service-handler';
 import { ModalService } from '../../core/utils/ui/modal.service';
 import { OrderOptions } from '../../core/models/api/responses/order-details';
+import { MatTableDataSource } from '@angular/material/table';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'mp-menu-items',

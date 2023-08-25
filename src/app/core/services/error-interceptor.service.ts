@@ -6,11 +6,6 @@ import { ConfigLoader } from '../utils/framework/config-loader.service';
 import { CONST } from '../utils/constant';
 import { ALERT_TYPE, Snackbar } from '../utils/ui/snackbar.service';
 import { Spinner } from '../utils/ui/spinner.service';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
-import {
-  InvalidTokenDialogComponent
-} from '../../shared/components/invalid-token-dialog/invalid-token-dialog.component';
-import { CookieService } from 'ngx-cookie-service';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
@@ -18,9 +13,7 @@ export class ErrorInterceptor implements HttpInterceptor {
   constructor (
     private configLoader: ConfigLoader,
     private snackBar: Snackbar,
-    private spinner: Spinner,
-    private cookieService: CookieService,
-    private dialog: MatDialog ) {}
+    private spinner: Spinner ) {}
 
   public intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(request).pipe(

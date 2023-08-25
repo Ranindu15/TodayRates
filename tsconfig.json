@@ -14,7 +14,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
+    "target": "es2017",
     "module": "es2020",
     "lib": [
       "es2018",
@@ -24,7 +24,6 @@
     "esModuleInterop": true,
     "strictPropertyInitialization": false,
     "suppressImplicitAnyIndexErrors": true,
-    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
